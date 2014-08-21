@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Python vs. Cython - prime function with speed test.
+Python/Cython - prime number functions with speed test.
 
 """
 from primes.pyprimes import primes as pyprimes
