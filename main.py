@@ -4,8 +4,8 @@
 Python vs. Cython - prime function with speed test.
 
 """
-import primes as cyprimes
-import pyprimes
+from primes.pyprimes import primes as pyprimes
+from primes.cyprimes import primes as cyprimes
 import time
 import sys
 
@@ -26,8 +26,8 @@ def main():
         kmax = KMAX
 
     # Tests
-    py_res = prime_test(pyprimes.primes, kmax)
-    cy_res = prime_test(cyprimes.primes, kmax)
+    py_res = prime_test(pyprimes, kmax)
+    cy_res = prime_test(cyprimes, kmax)
     
     # Result
     print('Each test printed {0} prime numbers.'.format(kmax))

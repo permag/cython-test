@@ -1,7 +1,7 @@
 *.pyc
 *.egg
 *.egg-info
-*.o
+*.so
 .coverage
 .DS_Store
 build
