@@ -30,7 +30,7 @@ def main():
     cy_res = prime_test(cyprimes, kmax)
     
     # Result
-    print('Each test printed {0} prime numbers.'.format(kmax))
+    print('Each test printed {} prime numbers.'.format(kmax))
     print('PYTHON: {} seconds'.format(py_res))
     print('CYTHON: {} seconds'.format(cy_res))
 
