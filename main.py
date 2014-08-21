@@ -22,6 +22,8 @@ def prime_test(f, kmax):
 def main():
     if len(sys.argv) > 1:
         kmax = int(sys.argv[1])
+        if kmax > KMAX:
+            kmax = KMAX
     else:
         kmax = KMAX
 
@@ -30,9 +32,14 @@ def main():
     cy_res = prime_test(cyprimes, kmax)
     
     # Result
-    print('Each test printed {} prime numbers.'.format(kmax))
+    print('Each test printed {} prime numbers'.format(kmax))
     print('PYTHON: {} seconds'.format(py_res))
     print('CYTHON: {} seconds'.format(cy_res))
+
+    if cy_res < py_res:
+        print 'Cython was {} times faster'.format(int(round(py_res / cy_res)))
+    elif py_res < cy_res:
+        print 'Python was {} times faster'.format(int(round(cy_res / py_res)))
 
 
 if __name__ == '__main__':
